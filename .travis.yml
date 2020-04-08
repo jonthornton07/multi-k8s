@@ -15,7 +15,7 @@ before_install:
     # - gcloud config set compute/zone us-east1-b
     # - gcloud container clusters get-credentials multi-cluster
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-    - docker build -t jonthornton07/react-est -f ./client/Dockerfile.dev ./client
+    - docker build -t jonthornton07/react-test -f ./client/Dockerfile.dev ./client
 
 script:
     - docker run -e CI=true jonthornton07/react-test npm run test
